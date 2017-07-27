@@ -12,7 +12,6 @@ namespace SocketServer
         static void Main(string[] args)
         {
             SocketServices SocketServices = new SocketServices();
-          
             Console.WriteLine("Server is ready!");
             Console.Read();
 
