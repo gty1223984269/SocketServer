@@ -46,3 +46,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.exe
+*.pdb
+*.exe
+SocketServer/SocketServer/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
