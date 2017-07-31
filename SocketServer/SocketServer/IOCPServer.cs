@@ -12,6 +12,7 @@ namespace SocketServer
     /// </summary>  
     public class IOCPServer : IDisposable  
     {  
+
         const int opsToPreAlloc = 2;  
         #region Fields  
         /// <summary>  
@@ -42,13 +43,15 @@ namespace SocketServer
         /// <summary>  
         /// 缓冲区管理  
         /// </summary>  
-        BufferManager _bufferManager;  
-  
+        BufferManager _bufferManager;
+
         /// <summary>  
         /// 对象池  
         /// </summary>  
-        SocketAsyncEventArgsPool _objectPool;  
-  
+        ASocketAsyncEventArgsPool _objectPool;
+
+        ASocketAsyncEventArgsPool _DicObjectPool;
+
         private bool disposed = false;  
  
         #endregion  
@@ -116,7 +119,8 @@ namespace SocketServer
   
             _objectPool = new SocketAsyncEventArgsPool(_maxClient);  
   
-            _maxAcceptedClients = new Semaphore(_maxClient, _maxClient);   
+            _maxAcceptedClients = new Semaphore(_maxClient, _maxClient);
+            _DicObjectPool = new DicSocketAsyncEventArgsPool();
         }  
  
         #endregion  
@@ -398,7 +402,8 @@ namespace SocketServer
                         byte[] data = new byte[e.BytesTransferred];  
                         Array.Copy(e.Buffer, e.Offset, data, 0, data.Length);//从e.Buffer块中复制数据出来，保证它可重用  
   
-                        string info=Encoding.Default.GetString(data);  
+                        string info=Encoding.Default.GetString(data);
+                        _DicObjectPool.Push(s, info.ToString());
                         Log4Debug(String.Format("收到 {0} 数据为 {1}",s.RemoteEndPoint.ToString(),info));  
                         //TODO 处理数据  
   
