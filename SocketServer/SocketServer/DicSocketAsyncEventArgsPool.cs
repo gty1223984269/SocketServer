@@ -83,6 +83,7 @@ namespace SocketServer
                     {
 
                         socket.Value.Send(Encoding.UTF8.GetBytes(content));
+                        Console.WriteLine(content);
                     }
                 }
                 catch (Exception e)

@@ -49,3 +49,7 @@ Temporary Items
 *.pdb
 *.exe
 SocketServer/SocketServer/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.suo
+*.user
+SocketServer/SocketServer/SocketServer.csproj
+*.suo

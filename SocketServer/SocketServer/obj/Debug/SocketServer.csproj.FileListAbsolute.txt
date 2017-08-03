@@ -4,9 +4,3 @@ F:\socket\SocketServer\SocketServer\bin\Debug\SocketServer.pdb
 F:\socket\SocketServer\SocketServer\obj\Debug\SocketServer.csprojResolveAssemblyReference.cache
 F:\socket\SocketServer\SocketServer\obj\Debug\SocketServer.exe
 F:\socket\SocketServer\SocketServer\obj\Debug\SocketServer.pdb
-D:\work\gitProject\SocketServer\SocketServer\SocketServer\bin\Debug\SocketServer.exe.config
-D:\work\gitProject\SocketServer\SocketServer\SocketServer\obj\Debug\SocketServer.exe
-D:\work\gitProject\SocketServer\SocketServer\SocketServer\obj\Debug\SocketServer.pdb
-D:\work\gitProject\SocketServer\SocketServer\SocketServer\bin\Debug\SocketServer.exe
-D:\work\gitProject\SocketServer\SocketServer\SocketServer\bin\Debug\SocketServer.pdb
-D:\work\gitProject\SocketServer\SocketServer\SocketServer\obj\Debug\SocketServer.csprojResolveAssemblyReference.cache
