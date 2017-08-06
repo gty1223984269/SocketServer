@@ -44,9 +44,9 @@ namespace SocketServer
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="to"></param>给谁发送消息
-        /// <param name="from"></param>谁发的消息
-        /// <param name="content"></param>发送的内容
+        /// <param name="to"></param>who do  you want to send message?
+        /// <param name="from"></param>who are you 
+        /// <param name="content"></param> the content of message
         public override void Send(string to, string from, string content)
         {
             lock (socketClient)
@@ -71,8 +71,8 @@ namespace SocketServer
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="from"></param>给谁发送消息
-        /// <param name="content"></param>发送的内容
+        /// <param name="from"></param>who do  you want to send message
+        /// <param name="content"></param> the content of message
         public override void SendAll(string from, string content)
         {
             lock (socketClient)
